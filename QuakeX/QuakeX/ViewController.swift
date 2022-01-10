@@ -11,10 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        view.largeContentTitle = "QuakeX"
+        view.backgroundColor = .cyan
     }
-
-
 }
 
