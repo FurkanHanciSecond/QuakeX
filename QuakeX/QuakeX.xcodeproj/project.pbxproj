@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70236C6F279F0B3B00E82108 /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C6E279F0B3B00E82108 /* NetworkLog.swift */; };
+		70236C71279F0B4500E82108 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C70279F0B4500E82108 /* ParameterEncoding.swift */; };
+		70236C73279F117D00E82108 /* QuakeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C72279F117D00E82108 /* QuakeError.swift */; };
+		70236C75279F11DE00E82108 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C74279F11DE00E82108 /* HTTPHeader.swift */; };
+		70236C77279F121F00E82108 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C76279F121F00E82108 /* HTTPMethod.swift */; };
+		70236C79279F13AF00E82108 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C78279F13AF00E82108 /* HTTPStatus.swift */; };
+		70236C7B279F13DD00E82108 /* QuakeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C7A279F13DD00E82108 /* QuakeModel.swift */; };
+		70236C7D279F14B700E82108 /* DecodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C7C279F14B700E82108 /* DecodeHelper.swift */; };
+		70236C81279F154B00E82108 /* ServiceClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C80279F154B00E82108 /* ServiceClientProtocol.swift */; };
+		70236C83279F163700E82108 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C82279F163700E82108 /* RouterProtocol.swift */; };
+		70236C85279F183E00E82108 /* ResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C84279F183E00E82108 /* ResultRouter.swift */; };
+		70236C87279F191900E82108 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C86279F191900E82108 /* ServiceClient.swift */; };
+		70236C89279F22B600E82108 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C88279F22B600E82108 /* AlertService.swift */; };
 		704C081E2766104D0049F999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C081D2766104D0049F999 /* AppDelegate.swift */; };
 		704C08202766104D0049F999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C081F2766104D0049F999 /* SceneDelegate.swift */; };
 		704C08222766104D0049F999 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C08212766104D0049F999 /* ViewController.swift */; };
@@ -16,6 +29,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70236C6E279F0B3B00E82108 /* NetworkLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLog.swift; sourceTree = "<group>"; };
+		70236C70279F0B4500E82108 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		70236C72279F117D00E82108 /* QuakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeError.swift; sourceTree = "<group>"; };
+		70236C74279F11DE00E82108 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		70236C76279F121F00E82108 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		70236C78279F13AF00E82108 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
+		70236C7A279F13DD00E82108 /* QuakeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeModel.swift; sourceTree = "<group>"; };
+		70236C7C279F14B700E82108 /* DecodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeHelper.swift; sourceTree = "<group>"; };
+		70236C80279F154B00E82108 /* ServiceClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClientProtocol.swift; sourceTree = "<group>"; };
+		70236C82279F163700E82108 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		70236C84279F183E00E82108 /* ResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRouter.swift; sourceTree = "<group>"; };
+		70236C86279F191900E82108 /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
+		70236C88279F22B600E82108 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		704C081A2766104D0049F999 /* QuakeX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuakeX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704C081D2766104D0049F999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		704C081F2766104D0049F999 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +63,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70236C66279F0AB600E82108 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				704C08212766104D0049F999 /* ViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		70236C67279F0AD600E82108 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				70236C6D279F0B2900E82108 /* Service */,
+				70236C6C279F0B1D00E82108 /* Protocols */,
+				70236C6B279F0B1500E82108 /* Model */,
+				70236C6A279F0B0D00E82108 /* HTTP */,
+				70236C68279F0AFB00E82108 /* Errors */,
+				70236C6E279F0B3B00E82108 /* NetworkLog.swift */,
+				70236C70279F0B4500E82108 /* ParameterEncoding.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		70236C68279F0AFB00E82108 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				70236C72279F117D00E82108 /* QuakeError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		70236C6A279F0B0D00E82108 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				70236C74279F11DE00E82108 /* HTTPHeader.swift */,
+				70236C76279F121F00E82108 /* HTTPMethod.swift */,
+				70236C78279F13AF00E82108 /* HTTPStatus.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		70236C6B279F0B1500E82108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70236C7A279F13DD00E82108 /* QuakeModel.swift */,
+				70236C7C279F14B700E82108 /* DecodeHelper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70236C6C279F0B1D00E82108 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				70236C7F279F153900E82108 /* Router */,
+				70236C7E279F153000E82108 /* Client */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		70236C6D279F0B2900E82108 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				70236C86279F191900E82108 /* ServiceClient.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		70236C7E279F153000E82108 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				70236C80279F154B00E82108 /* ServiceClientProtocol.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		70236C7F279F153900E82108 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				70236C82279F163700E82108 /* RouterProtocol.swift */,
+				70236C84279F183E00E82108 /* ResultRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		704C08112766104D0049F999 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +165,10 @@
 		704C081C2766104D0049F999 /* QuakeX */ = {
 			isa = PBXGroup;
 			children = (
+				70236C67279F0AD600E82108 /* Network */,
+				70236C66279F0AB600E82108 /* Screens */,
 				70550661278BE17E00F12F25 /* Application */,
 				7055780227837A6000432BEF /* Support */,
-				704C08212766104D0049F999 /* ViewController.swift */,
 				704C08262766104E0049F999 /* Assets.xcassets */,
 				704C08282766104E0049F999 /* LaunchScreen.storyboard */,
 				704C082B2766104E0049F999 /* Info.plist */,
@@ -79,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				7055780327837A7400432BEF /* Constants.swift */,
+				70236C88279F22B600E82108 /* AlertService.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -152,10 +263,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70236C71279F0B4500E82108 /* ParameterEncoding.swift in Sources */,
+				70236C73279F117D00E82108 /* QuakeError.swift in Sources */,
+				70236C7B279F13DD00E82108 /* QuakeModel.swift in Sources */,
 				704C08222766104D0049F999 /* ViewController.swift in Sources */,
+				70236C6F279F0B3B00E82108 /* NetworkLog.swift in Sources */,
+				70236C81279F154B00E82108 /* ServiceClientProtocol.swift in Sources */,
+				70236C7D279F14B700E82108 /* DecodeHelper.swift in Sources */,
+				70236C75279F11DE00E82108 /* HTTPHeader.swift in Sources */,
+				70236C83279F163700E82108 /* RouterProtocol.swift in Sources */,
+				70236C77279F121F00E82108 /* HTTPMethod.swift in Sources */,
 				704C081E2766104D0049F999 /* AppDelegate.swift in Sources */,
+				70236C85279F183E00E82108 /* ResultRouter.swift in Sources */,
 				704C08202766104D0049F999 /* SceneDelegate.swift in Sources */,
+				70236C89279F22B600E82108 /* AlertService.swift in Sources */,
 				7055780427837A7400432BEF /* Constants.swift in Sources */,
+				70236C87279F191900E82108 /* ServiceClient.swift in Sources */,
+				70236C79279F13AF00E82108 /* HTTPStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

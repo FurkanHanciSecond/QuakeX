@@ -12,5 +12,10 @@ struct Constants {
     static let url = "https://api.orhanaydogdu.com.tr/deprem/live.php?limit=100"
     static let baseUrl = "https://api.orhanaydogdu.com.tr"
     
-    
+    struct Text {
+        enum Error {
+            static let ok = "OK"
+            static let oops = "Oops an error occured"
+        }
+    }
 }
