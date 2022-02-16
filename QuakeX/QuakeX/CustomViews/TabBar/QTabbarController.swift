@@ -16,28 +16,31 @@ class QTabbarController: UITabBarController {
     }
     
     private func configTabBar() {
-        tabBar.tintColor = Constants.Style.Color.lightGray
+        tabBar.barTintColor = Constants.Style.Color.black
+        tabBar.tintColor = Constants.Style.Color.red
+        
     }
     
     private func setTabs() {
         viewControllers = [
-            quakeListVC(),
+            quakesVC(),
             emergencyContactVC(),
             settingsVC()
         ]
     }
     
-    private func quakeListVC() -> UINavigationController {
-        let quakeListViewController = QuakesViewController()
+    private func quakesVC() -> UINavigationController {
+        let quakesViewController = QuakesViewController()
         let tabBarItem = UITabBarItem(title: Constants.Text.Bar.quakes, image: Constants.Style.Image.quakes, tag: 0)
         
-        quakeListViewController.tabBarItem = tabBarItem
-        return UINavigationController(rootViewController: quakeListViewController)
+        quakesViewController.tabBarItem = tabBarItem
+        return UINavigationController(rootViewController: quakesViewController)
     }
     
     private func emergencyContactVC() -> UINavigationController {
         let emergencyViewController = EmergencyContactVC()
         let tabBarItem = UITabBarItem(title: Constants.Text.Bar.emergencyContacts, image: Constants.Style.Image.emergencyContacts, tag: 1)
+        
         emergencyViewController.tabBarItem = tabBarItem
         return UINavigationController(rootViewController: emergencyViewController)
     }
@@ -45,10 +48,9 @@ class QTabbarController: UITabBarController {
     private func settingsVC() -> UINavigationController {
         let settingsViewController = SettingsVC()
         let tabBarItem = UITabBarItem(title: Constants.Text.Bar.settings, image: Constants.Style.Image.settings, tag: 2)
+        
         settingsViewController.tabBarItem = tabBarItem
         return UINavigationController(rootViewController: settingsViewController)
     }
-
-    
     
 }

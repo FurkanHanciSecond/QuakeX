@@ -11,8 +11,17 @@ class EmergencyContactVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
 
+        setup()
+    }
+    
+    private func setup() {
+        configureView()
+    }
+    
+    private func configureView() {
+        view.backgroundColor = .systemBackground
+        self.title = Constants.Text.Bar.emergencyContacts
     }
 
 }

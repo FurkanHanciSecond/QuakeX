@@ -10,18 +10,22 @@ import UIKit
 struct Constants {
     
     static let url = "https://api.orhanaydogdu.com.tr/deprem/live.php?limit=100"
-    static let baseUrl = "https://api.orhanaydogdu.com.tr"
+    static let baseUrl = "api.orhanaydogdu.com.tr"
+    static let cellID = "quakeCell"
+    static let question = "?"
     
     struct Text {
         enum Error {
             static let ok = "OK"
             static let oops = "Oops an error occured"
+            static let noResultsFound = "No Results Found"
         }
         
         enum Bar {
             static let quakes = "Last Quakes"
             static let emergencyContacts = "Emergency Contacts"
             static let settings = "Settings"
+            static let search = "Search"
         }
         
     }
@@ -45,6 +49,8 @@ struct Constants {
             static let secondaryBackground = UIColor.secondarySystemBackground
             static let red = UIColor.red
             static let black = UIColor.black
+            static let cellBackground = UIColor.cellBackground
+            static let cellShadow = UIColor.cellShadow
         }
         
     }

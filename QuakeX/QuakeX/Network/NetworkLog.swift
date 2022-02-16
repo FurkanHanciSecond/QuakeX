@@ -13,7 +13,7 @@ struct NetworkLog {
                     fileName: String = #file,
                     functionName: String = #function,
                     lineNumber: Int = #line) {
-        print("Request 🚀")
+        print("Request 🚀 🌍")
         defer { print("END") }
         
         print("Called \(fileName.components(separatedBy: "/").last ?? fileName) - \(functionName) at line \(lineNumber)")

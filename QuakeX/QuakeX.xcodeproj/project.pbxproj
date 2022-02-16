@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70092A6227BD772D002A3364 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70092A6127BD772D002A3364 /* UITableView+Ext.swift */; };
+		70092A6427BD77DF002A3364 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70092A6327BD77DF002A3364 /* UIView+Ext.swift */; };
+		70092A6627BD7A94002A3364 /* QuakesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70092A6527BD7A94002A3364 /* QuakesViewModel.swift */; };
+		70092A6827BD7A9B002A3364 /* QuakesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70092A6727BD7A9B002A3364 /* QuakesModel.swift */; };
+		70092A6B27BD7F5D002A3364 /* QuakesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70092A6A27BD7F5D002A3364 /* QuakesTableViewCell.swift */; };
+		70092A6D27BD8023002A3364 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70092A6C27BD8023002A3364 /* UIColor+Ext.swift */; };
+		70092A7027BD8160002A3364 /* QuakeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70092A6F27BD8160002A3364 /* QuakeLabel.swift */; };
+		70092A7327BD88DC002A3364 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70092A7227BD88DC002A3364 /* LoadingViewController.swift */; };
+		70092A7527BD8FA3002A3364 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70092A7427BD8FA3002A3364 /* String+Ext.swift */; };
 		70236C6F279F0B3B00E82108 /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C6E279F0B3B00E82108 /* NetworkLog.swift */; };
 		70236C71279F0B4500E82108 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C70279F0B4500E82108 /* ParameterEncoding.swift */; };
 		70236C73279F117D00E82108 /* QuakeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70236C72279F117D00E82108 /* QuakeError.swift */; };
@@ -34,6 +43,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70092A6127BD772D002A3364 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		70092A6327BD77DF002A3364 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		70092A6527BD7A94002A3364 /* QuakesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesViewModel.swift; sourceTree = "<group>"; };
+		70092A6727BD7A9B002A3364 /* QuakesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesModel.swift; sourceTree = "<group>"; };
+		70092A6A27BD7F5D002A3364 /* QuakesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesTableViewCell.swift; sourceTree = "<group>"; };
+		70092A6C27BD8023002A3364 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		70092A6F27BD8160002A3364 /* QuakeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeLabel.swift; sourceTree = "<group>"; };
+		70092A7227BD88DC002A3364 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		70092A7427BD8FA3002A3364 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		70236C6E279F0B3B00E82108 /* NetworkLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLog.swift; sourceTree = "<group>"; };
 		70236C70279F0B4500E82108 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		70236C72279F117D00E82108 /* QuakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeError.swift; sourceTree = "<group>"; };
@@ -73,6 +91,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70092A6027BD771D002A3364 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70092A6127BD772D002A3364 /* UITableView+Ext.swift */,
+				70092A6327BD77DF002A3364 /* UIView+Ext.swift */,
+				70092A6C27BD8023002A3364 /* UIColor+Ext.swift */,
+				70092A7427BD8FA3002A3364 /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		70092A6927BD7F47002A3364 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				70092A6A27BD7F5D002A3364 /* QuakesTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		70092A6E27BD8131002A3364 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				70092A6F27BD8160002A3364 /* QuakeLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		70092A7127BD88C6002A3364 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70092A7227BD88DC002A3364 /* LoadingViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		70236C66279F0AB600E82108 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +141,9 @@
 		70236C67279F0AD600E82108 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				70236C6B279F0B1500E82108 /* Model */,
 				70236C6D279F0B2900E82108 /* Service */,
 				70236C6C279F0B1D00E82108 /* Protocols */,
-				70236C6B279F0B1500E82108 /* Model */,
 				70236C6A279F0B0D00E82108 /* HTTP */,
 				70236C68279F0AFB00E82108 /* Errors */,
 				70236C6E279F0B3B00E82108 /* NetworkLog.swift */,
@@ -179,10 +232,11 @@
 		704C081C2766104D0049F999 /* QuakeX */ = {
 			isa = PBXGroup;
 			children = (
+				70550661278BE17E00F12F25 /* Application */,
+				70092A6027BD771D002A3364 /* Extensions */,
 				70236C67279F0AD600E82108 /* Network */,
 				70236C66279F0AB600E82108 /* Screens */,
 				70F524BA27B99ABC00B46373 /* CustomViews */,
-				70550661278BE17E00F12F25 /* Application */,
 				7055780227837A6000432BEF /* Support */,
 				704C08262766104E0049F999 /* Assets.xcassets */,
 				704C08282766104E0049F999 /* LaunchScreen.storyboard */,
@@ -213,6 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				70F524AB27B995A800B46373 /* QuakesViewController.swift */,
+				70092A6527BD7A94002A3364 /* QuakesViewModel.swift */,
+				70092A6727BD7A9B002A3364 /* QuakesModel.swift */,
 			);
 			path = Quakes;
 			sourceTree = "<group>";
@@ -252,6 +308,9 @@
 		70F524BA27B99ABC00B46373 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				70092A7127BD88C6002A3364 /* Views */,
+				70092A6E27BD8131002A3364 /* Label */,
+				70092A6927BD7F47002A3364 /* Cells */,
 				70F524BB27B99AE000B46373 /* TabBar */,
 			);
 			path = CustomViews;
@@ -334,22 +393,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70092A6227BD772D002A3364 /* UITableView+Ext.swift in Sources */,
+				70092A7027BD8160002A3364 /* QuakeLabel.swift in Sources */,
 				70236C71279F0B4500E82108 /* ParameterEncoding.swift in Sources */,
 				70236C73279F117D00E82108 /* QuakeError.swift in Sources */,
 				70F524AC27B995A800B46373 /* QuakesViewController.swift in Sources */,
 				70236C7B279F13DD00E82108 /* QuakeModel.swift in Sources */,
 				70236C6F279F0B3B00E82108 /* NetworkLog.swift in Sources */,
+				70092A6627BD7A94002A3364 /* QuakesViewModel.swift in Sources */,
+				70092A7527BD8FA3002A3364 /* String+Ext.swift in Sources */,
 				70F524B227B998ED00B46373 /* QuakesDetailVC.swift in Sources */,
 				70236C81279F154B00E82108 /* ServiceClientProtocol.swift in Sources */,
+				70092A6427BD77DF002A3364 /* UIView+Ext.swift in Sources */,
 				70F524BD27B99B4800B46373 /* QTabbarController.swift in Sources */,
+				70092A6B27BD7F5D002A3364 /* QuakesTableViewCell.swift in Sources */,
 				70236C7D279F14B700E82108 /* DecodeHelper.swift in Sources */,
 				70236C75279F11DE00E82108 /* HTTPHeader.swift in Sources */,
+				70092A6827BD7A9B002A3364 /* QuakesModel.swift in Sources */,
 				70F524B627B9991700B46373 /* SettingsVC.swift in Sources */,
+				70092A7327BD88DC002A3364 /* LoadingViewController.swift in Sources */,
 				70236C83279F163700E82108 /* RouterProtocol.swift in Sources */,
 				70236C77279F121F00E82108 /* HTTPMethod.swift in Sources */,
 				704C081E2766104D0049F999 /* AppDelegate.swift in Sources */,
 				70236C85279F183E00E82108 /* ResultRouter.swift in Sources */,
 				704C08202766104D0049F999 /* SceneDelegate.swift in Sources */,
+				70092A6D27BD8023002A3364 /* UIColor+Ext.swift in Sources */,
 				70F524B927B9998A00B46373 /* AddNewContactVC.swift in Sources */,
 				70236C89279F22B600E82108 /* AlertService.swift in Sources */,
 				7055780427837A7400432BEF /* Constants.swift in Sources */,

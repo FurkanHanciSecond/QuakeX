@@ -24,12 +24,13 @@ extension RouterProtocol {
         var component = URLComponents()
         component.scheme = scheme
         component.host = host
-        component.path = path
+        component.path = path.removingPercentEncoding!
         
         if parameterEncoding == .url {
             component.queryItems = parameters.map({ (key , value) in
                 return URLQueryItem(name: key, value: String(describing: value))
             })
+            
         }
         
         guard let url = component.url else {

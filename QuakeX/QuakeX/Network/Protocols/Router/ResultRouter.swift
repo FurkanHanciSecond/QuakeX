@@ -7,12 +7,55 @@
 
 import Foundation
 
-// MARK: TODO
-enum MainModelRouter  {
+enum MainModelRouter : RouterProtocol  {
     
     private static let baseurl = Constants.baseUrl
     
     case getDataFromMainModel
+    
+    var scheme: String {
+        return "https"
+    }
+    
+    var host: String {
+        return MainModelRouter.baseurl ?? ""
+    }
+    
+    var path: String {
+        switch self {
+        case .getDataFromMainModel:
+            return "/deprem/live.php?limit=100"
+        }
+    }
+    
+    var headers: [HTTPHeader] {
+         switch self {
+         default:
+           return []
+         }
+       }
+
+       var parameters: [String: Any] {
+         switch self {
+         default:
+           return [:]
+         }
+       }
+
+       var parameterEncoding: ParameterEncoding {
+         switch self {
+         default:
+           return .url
+         }
+       }
+
+       var method: HTTPMethod {
+         switch self {
+         case .getDataFromMainModel:
+           return .get
+         }
+       }
+    
     
     
 }
