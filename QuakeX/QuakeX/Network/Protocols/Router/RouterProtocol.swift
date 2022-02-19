@@ -24,7 +24,10 @@ extension RouterProtocol {
         var component = URLComponents()
         component.scheme = scheme
         component.host = host
-        component.path = path.removingPercentEncoding!
+        
+        //MARK: So Importnant
+        component.queryItems = [URLQueryItem(name: "limit", value: "100")]
+        component.path = path
         
         if parameterEncoding == .url {
             component.queryItems = parameters.map({ (key , value) in

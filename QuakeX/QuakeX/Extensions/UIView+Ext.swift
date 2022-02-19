@@ -32,9 +32,16 @@ extension UIView {
       layer.shadowOpacity = 0.1
       layer.shadowRadius = 2
     }
+    
+    func dropDetailShadow() {
+        layer.shadowColor = Constants.Style.Color.detailShadow.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 3)
+        layer.shadowOpacity = 0.1
+        layer.shadowRadius = 2
+    }
 
     func addBorder() {
-      layer.borderWidth = 1
+        layer.borderWidth = 0.3
       layer.borderColor = Constants.Style.Color.lightGray.cgColor
     }
 }

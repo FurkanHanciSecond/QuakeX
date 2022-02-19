@@ -26,9 +26,9 @@ class QuakesTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    private lazy var locationLabel = QuakeLabel(fontSize: 20, fontWeight: .light)
-    private lazy var quakeNameLabel = QuakeLabel(fontSize: 20, fontWeight: .bold)
-    private lazy var quakeDateLabel = QuakeLabel(fontSize: 20, fontWeight: .light)
+    private lazy var locationLabel = QuakeLabel(fontSize: 20, fontWeight: .light , textColor: .systemBackground)
+    private lazy var quakeNameLabel = QuakeLabel(fontSize: 20, fontWeight: .bold , textColor: .systemBackground)
+    private lazy var quakeDateLabel = QuakeLabel(fontSize: 20, fontWeight: .light , textColor: .systemBackground)
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -64,7 +64,8 @@ class QuakesTableViewCell: UITableViewCell {
         setupTexts()
         selectionStyle = .none
         
-        let horizontalPadding: CGFloat = 16
+        let locationLabePadding : CGFloat = 25
+        let horizontalPadding: CGFloat = 20
         let verticalPadding: CGFloat = 12
         let symbolHeight: CGFloat = 20
         
@@ -78,11 +79,11 @@ class QuakesTableViewCell: UITableViewCell {
             containerView.topAnchor.constraint(equalTo: topAnchor, constant: verticalPadding),
             containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -verticalPadding),
             
-            locationLabel.topAnchor.constraint(equalTo: topAnchor, constant: verticalPadding),
-            locationLabel.leadingAnchor.constraint(equalTo: leadingAnchor , constant: horizontalPadding),
+            locationLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            locationLabel.leadingAnchor.constraint(equalTo: leadingAnchor , constant: locationLabePadding),
             
-            quakeNameLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: verticalPadding),
-            quakeNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: horizontalPadding),
+            quakeNameLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 5),
+            quakeNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             quakeNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -horizontalPadding),
             
             
@@ -92,8 +93,9 @@ class QuakesTableViewCell: UITableViewCell {
             arrowRightImageView.heightAnchor.constraint(equalToConstant: symbolHeight),
             
             
-            quakeDateLabel.topAnchor.constraint(equalTo: quakeNameLabel.bottomAnchor, constant: verticalPadding),
-            quakeDateLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: verticalPadding),
+            quakeDateLabel.topAnchor.constraint(equalTo: quakeNameLabel.bottomAnchor, constant: 16),
+            quakeDateLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            //quakeDateLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: verticalPadding)
         ])
     }
     

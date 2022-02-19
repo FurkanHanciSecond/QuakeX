@@ -18,13 +18,13 @@ enum MainModelRouter : RouterProtocol  {
     }
     
     var host: String {
-        return MainModelRouter.baseurl ?? ""
+        return MainModelRouter.baseurl
     }
     
     var path: String {
         switch self {
         case .getDataFromMainModel:
-            return "/deprem/live.php?limit=100"
+            return "/deprem/live.php"
         }
     }
     

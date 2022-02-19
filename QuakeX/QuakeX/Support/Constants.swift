@@ -13,7 +13,7 @@ struct Constants {
     static let baseUrl = "api.orhanaydogdu.com.tr"
     static let cellID = "quakeCell"
     static let question = "?"
-    
+    static let mapReuse = "quakeMap"
     struct Text {
         enum Error {
             static let ok = "OK"
@@ -25,7 +25,7 @@ struct Constants {
             static let quakes = "Last Quakes"
             static let emergencyContacts = "Emergency Contacts"
             static let settings = "Settings"
-            static let search = "Search"
+            static let search = "Search Latest Quakes"
         }
         
     }
@@ -51,6 +51,8 @@ struct Constants {
             static let black = UIColor.black
             static let cellBackground = UIColor.cellBackground
             static let cellShadow = UIColor.cellShadow
+            static let detailBackground = UIColor.detailBackground
+            static let detailShadow = UIColor.detailShadow
         }
         
     }

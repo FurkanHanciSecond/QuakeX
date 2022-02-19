@@ -33,9 +33,11 @@ class QuakesViewController: LoadingViewController {
     }
     
     private func getQuakes() {
+        showLoadingView()
         generateHaptic()
         viewModel.getQuakes { [weak self] in
             self?.quakeTableView.reloadDataOnMainThread()
+            self?.dismissLoadingView()
         } errorContent: { err in
             AlertManager.showAlert(message: err.rawValue, viewController: self)
         }
@@ -47,9 +49,12 @@ class QuakesViewController: LoadingViewController {
         configureNavigationController()
         configureTableViewDelegate()
         configureTableViewDatasource()
+        configureSearchBar()
         configureTableView()
+        refreshTableView()
     }
     
+    //TODO: Trick 
     private func generateHaptic() {
         let haptic = UINotificationFeedbackGenerator()
         haptic.notificationOccurred(.success)
@@ -58,9 +63,31 @@ class QuakesViewController: LoadingViewController {
     private func configureSearchBar() {
         let searchController = UISearchController()
         searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = true
         searchController.searchBar.text = viewModel.searchText
         navigationItem.searchController = searchController
+    }
+    
+    private func refreshTableView() {
+        self.quakeTableView.refreshControl = UIRefreshControl()
+        
+        if let refreshControl = quakeTableView.refreshControl {
+            refreshControl.tintColor = .gray
+            refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        }
+    }
+    
+    @objc func refresh(_ sender : UIRefreshControl) {
+        self.quakeTableView.refreshControl?.beginRefreshing()
+        
+        viewModel.getQuakes { [weak self] in
+            self?.quakeTableView.refreshControl?.endRefreshing()
+            self?.quakeTableView.reloadDataOnMainThread()
+        } errorContent: { [weak self] err in
+            self?.quakeTableView.refreshControl?.endRefreshing()
+            AlertManager.showAlert(message: err.rawValue, viewController: self)
+        }
+
     }
 
     private func configureViewController() {
@@ -75,6 +102,7 @@ class QuakesViewController: LoadingViewController {
         view.addSubview(quakeTableView)
         quakeTableView.pinToEdges(of: view)
         quakeTableView.separatorStyle = .none
+        
         quakeTableView.removeExcessCells()
         quakeTableView.register(QuakesTableViewCell.self, forCellReuseIdentifier: Constants.cellID)
     }
@@ -91,7 +119,12 @@ class QuakesViewController: LoadingViewController {
 
 
 extension QuakesViewController : UITableViewDelegate {
-    
+    //TODO: Make Clickable
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let quakes = viewModel.quakes?[indexPath.row]
+        let quakeDetailViewController = QuakesDetailVC(mainModel: quakes ?? quakes.unsafelyUnwrapped)
+        navigationController?.pushViewController(quakeDetailViewController, animated: true)
+    }
 }
 
 extension QuakesViewController : UITableViewDataSource {
@@ -104,6 +137,10 @@ extension QuakesViewController : UITableViewDataSource {
         let quake = viewModel.quakes?[indexPath.row]
         cell.set(data: quake ?? quake.unsafelyUnwrapped)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
     
     

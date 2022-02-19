@@ -15,7 +15,7 @@ protocol QuakesViewModelProtocol {
     func getQuakes(content: @escaping () -> Void, errorContent: @escaping (QuakeError) -> Void)
 }
 
-class QuakesViewModel : QuakesViewModelProtocol {
+final class QuakesViewModel : QuakesViewModelProtocol {
     
     var filter = ""
     
