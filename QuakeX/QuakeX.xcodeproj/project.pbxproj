@@ -34,6 +34,7 @@
 		704C08272766104E0049F999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704C08262766104E0049F999 /* Assets.xcassets */; };
 		704C082A2766104E0049F999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704C08282766104E0049F999 /* LaunchScreen.storyboard */; };
 		7055780427837A7400432BEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7055780327837A7400432BEF /* Constants.swift */; };
+		7076059427C2858600CFE295 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076059327C2858600CFE295 /* NotificationHelper.swift */; };
 		70988BC227C175490050AA38 /* QuakeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC127C175490050AA38 /* QuakeDetailViewModel.swift */; };
 		70988BC427C175570050AA38 /* QuakeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC327C175570050AA38 /* QuakeDetailModel.swift */; };
 		70988BC627C17C3A0050AA38 /* QuakeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC527C17C3A0050AA38 /* QuakeDetailView.swift */; };
@@ -75,6 +76,7 @@
 		704C08292766104E0049F999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		704C082B2766104E0049F999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7055780327837A7400432BEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7076059327C2858600CFE295 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		70988BC127C175490050AA38 /* QuakeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailViewModel.swift; sourceTree = "<group>"; };
 		70988BC327C175570050AA38 /* QuakeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailModel.swift; sourceTree = "<group>"; };
 		70988BC527C17C3A0050AA38 /* QuakeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailView.swift; sourceTree = "<group>"; };
@@ -264,10 +266,19 @@
 		7055780227837A6000432BEF /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				7076059227C2856300CFE295 /* Helpers */,
 				7055780327837A7400432BEF /* Constants.swift */,
 				70236C88279F22B600E82108 /* AlertService.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		7076059227C2856300CFE295 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7076059327C2858600CFE295 /* NotificationHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		70F524AD27B9988C00B46373 /* Quakes */ = {
@@ -408,6 +419,7 @@
 				70236C73279F117D00E82108 /* QuakeError.swift in Sources */,
 				70F524AC27B995A800B46373 /* QuakesViewController.swift in Sources */,
 				70236C7B279F13DD00E82108 /* QuakeModel.swift in Sources */,
+				7076059427C2858600CFE295 /* NotificationHelper.swift in Sources */,
 				70236C6F279F0B3B00E82108 /* NetworkLog.swift in Sources */,
 				70988BC627C17C3A0050AA38 /* QuakeDetailView.swift in Sources */,
 				70988BC427C175570050AA38 /* QuakeDetailModel.swift in Sources */,

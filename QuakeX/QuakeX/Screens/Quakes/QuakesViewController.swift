@@ -52,6 +52,11 @@ class QuakesViewController: LoadingViewController {
         configureSearchBar()
         configureTableView()
         refreshTableView()
+        setNotificationHelper()
+    }
+    
+    private func setNotificationHelper() {
+        NotificationHelper.shared.requestForPermission()
     }
     
     //TODO: Trick 

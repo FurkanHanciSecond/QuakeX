@@ -24,8 +24,7 @@ class QuakesDetailVC: UIViewController {
         return mapView
     }()
     
-    private let coordinate = CLLocationCoordinate2D(latitude: 38.335692, longitude: 38.254197)
-
+    private var coordinate = CLLocationCoordinate2D(latitude: 37.0886, longitude: 37.0886)
     
     private lazy var detailView = QuakeDetailView()
     
@@ -55,7 +54,7 @@ class QuakesDetailVC: UIViewController {
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
         pin.title = "Quake Is Here!!"
-        pin.subtitle = "Quake Is Here!!"
+        pin.subtitle = "Be Careful!!"
         quakeDetailMapView.addAnnotation(pin)
         let region = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
         quakeDetailMapView.setRegion(region, animated: true)
@@ -64,7 +63,7 @@ class QuakesDetailVC: UIViewController {
     
     private func getDetailInfo() {
         viewModel.getData {
-            
+           
         } errorContent: { err in
             AlertManager.showAlert(message: err.rawValue, viewController: self)
         }
@@ -76,6 +75,7 @@ class QuakesDetailVC: UIViewController {
         setupDetailView()
         configureUploadButton()
         setupMapDelegate()
+        addPin()
     }
     
     private func configureBackground() {
@@ -93,7 +93,7 @@ class QuakesDetailVC: UIViewController {
 }
     
     @objc private func uploadButton(_ sender : UIButton) {
-        let text = "Hey you should definitely see this quake \(viewModel.quakes?.title) and time \(viewModel.quakes?.date)"
+        let text = "Hey you should definitely see this quake \(viewModel.quakes?.title ?? "") and time \(viewModel.quakes?.date ?? "")"
         let textShare = [text]
         let activityController = UIActivityViewController(activityItems: textShare, applicationActivities: nil)
         activityController.popoverPresentationController?.sourceView = self.view
@@ -105,8 +105,10 @@ class QuakesDetailVC: UIViewController {
     private func setupDetailView() {
         let viewHeight : CGFloat = 270
         let padding : CGFloat = 25
-       // detailView.dropShadow()
         view.addSubviews(detailView , quakeDetailMapView)
+        
+        self.coordinate.latitude = self.viewModel.quakes?.lat ?? 17.0
+        self.coordinate.longitude = self.viewModel.quakes?.lng ?? 17.0
         
         detailView.translatesAutoresizingMaskIntoConstraints = false
         quakeDetailMapView.translatesAutoresizingMaskIntoConstraints = false
@@ -137,7 +139,7 @@ extension QuakesDetailVC : MKMapViewDelegate {
             pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: Constants.mapReuse)
             pinView?.canShowCallout = true
             pinView?.animatesWhenAdded = true
-            pinView?.glyphImage = UIImage(systemName: "pencil")
+            pinView?.glyphImage = UIImage(systemName: "mappin.and.ellipse")
             
         default:
             pinView?.annotation = annotation

@@ -24,7 +24,6 @@ extension RouterProtocol {
         var component = URLComponents()
         component.scheme = scheme
         component.host = host
-        
         //MARK: So Importnant
         component.queryItems = [URLQueryItem(name: "limit", value: "100")]
         component.path = path
