@@ -20,15 +20,15 @@ class QuakesTableViewCell: UITableViewCell {
     private lazy var arrowRightImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.tintColor = Constants.Style.Color.background
+        imageView.tintColor = Constants.Style.Color.black
         imageView.image = Constants.Style.Image.arrowRight
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    private lazy var locationLabel = QuakeLabel(fontSize: 20, fontWeight: .light , textColor: .systemBackground)
-    private lazy var quakeNameLabel = QuakeLabel(fontSize: 20, fontWeight: .bold , textColor: .systemBackground)
-    private lazy var quakeDateLabel = QuakeLabel(fontSize: 20, fontWeight: .light , textColor: .systemBackground)
+    private lazy var locationLabel = QuakeLabel(fontSize: 20, fontWeight: .light , textColor: .black)
+    private lazy var quakeNameLabel = QuakeLabel(fontSize: 20, fontWeight: .bold , textColor: .black)
+    private lazy var quakeDateLabel = QuakeLabel(fontSize: 20, fontWeight: .light , textColor: .black)
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

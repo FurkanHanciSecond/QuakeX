@@ -61,8 +61,8 @@ class QuakesViewController: LoadingViewController {
     
     //TODO: Trick 
     private func generateHaptic() {
-        let haptic = UINotificationFeedbackGenerator()
-        haptic.notificationOccurred(.success)
+        let haptic = UISelectionFeedbackGenerator()
+        haptic.selectionChanged()
     }
     
     private func configureSearchBar() {

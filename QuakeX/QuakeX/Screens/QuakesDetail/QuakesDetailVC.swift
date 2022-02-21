@@ -56,7 +56,7 @@ class QuakesDetailVC: UIViewController {
         pin.title = "Quake Is Here!!"
         pin.subtitle = "Be Careful!!"
         quakeDetailMapView.addAnnotation(pin)
-        let region = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
+        let region = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: 550, longitudinalMeters: 550)
         quakeDetailMapView.setRegion(region, animated: true)
 
     }
