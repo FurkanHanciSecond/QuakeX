@@ -118,7 +118,7 @@ class QuakesDetailVC: UIViewController {
             quakeDetailMapView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             quakeDetailMapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             quakeDetailMapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            quakeDetailMapView.heightAnchor.constraint(equalToConstant: 150),
+            quakeDetailMapView.heightAnchor.constraint(equalToConstant: 200),
             
             detailView.topAnchor.constraint(equalTo: quakeDetailMapView.bottomAnchor, constant: padding),
             detailView.heightAnchor.constraint(equalToConstant: viewHeight),

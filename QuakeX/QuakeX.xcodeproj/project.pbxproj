@@ -34,6 +34,7 @@
 		704C08272766104E0049F999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704C08262766104E0049F999 /* Assets.xcassets */; };
 		704C082A2766104E0049F999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704C08282766104E0049F999 /* LaunchScreen.storyboard */; };
 		7055780427837A7400432BEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7055780327837A7400432BEF /* Constants.swift */; };
+		705E378327C426D10010EA30 /* QuakeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E378227C426D10010EA30 /* QuakeTextField.swift */; };
 		7076059427C2858600CFE295 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076059327C2858600CFE295 /* NotificationHelper.swift */; };
 		70988BC227C175490050AA38 /* QuakeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC127C175490050AA38 /* QuakeDetailViewModel.swift */; };
 		70988BC427C175570050AA38 /* QuakeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC327C175570050AA38 /* QuakeDetailModel.swift */; };
@@ -76,6 +77,7 @@
 		704C08292766104E0049F999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		704C082B2766104E0049F999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7055780327837A7400432BEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		705E378227C426D10010EA30 /* QuakeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeTextField.swift; sourceTree = "<group>"; };
 		7076059327C2858600CFE295 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		70988BC127C175490050AA38 /* QuakeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailViewModel.swift; sourceTree = "<group>"; };
 		70988BC327C175570050AA38 /* QuakeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailModel.swift; sourceTree = "<group>"; };
@@ -273,6 +275,14 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		705E378127C426B30010EA30 /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				705E378227C426D10010EA30 /* QuakeTextField.swift */,
+			);
+			path = Textfields;
+			sourceTree = "<group>";
+		};
 		7076059227C2856300CFE295 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +338,7 @@
 		70F524BA27B99ABC00B46373 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				705E378127C426B30010EA30 /* Textfields */,
 				70092A7127BD88C6002A3364 /* Views */,
 				70092A6E27BD8131002A3364 /* Label */,
 				70092A6927BD7F47002A3364 /* Cells */,
@@ -428,6 +439,7 @@
 				70F524B227B998ED00B46373 /* QuakesDetailVC.swift in Sources */,
 				70236C81279F154B00E82108 /* ServiceClientProtocol.swift in Sources */,
 				70988BC227C175490050AA38 /* QuakeDetailViewModel.swift in Sources */,
+				705E378327C426D10010EA30 /* QuakeTextField.swift in Sources */,
 				70092A6427BD77DF002A3364 /* UIView+Ext.swift in Sources */,
 				70F524BD27B99B4800B46373 /* QTabbarController.swift in Sources */,
 				70092A6B27BD7F5D002A3364 /* QuakesTableViewCell.swift in Sources */,
