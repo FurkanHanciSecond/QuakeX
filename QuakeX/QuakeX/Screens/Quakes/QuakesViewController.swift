@@ -25,11 +25,8 @@ class QuakesViewController: LoadingViewController {
         super.viewDidLoad()
         
         setup()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         getQuakes()
+
     }
     
     private func getQuakes() {
