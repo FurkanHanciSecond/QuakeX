@@ -13,7 +13,7 @@ class QuakeDetailView: UIView {
     private lazy var quakeNameLabel = QuakeLabel(fontSize: 20, fontWeight: .bold, textColor: .systemBackground)
     private lazy var timeLabel = QuakeLabel(fontSize: 25, fontWeight: .light, textColor: .systemBackground)
     private lazy var quakeDatelabel = QuakeLabel(fontSize: 20, fontWeight: .medium, textColor: .systemBackground)
-    private lazy var quakeDepthLabel = QuakeLabel(fontSize: 25, fontWeight: .regular, textColor: .systemBackground)
+    private lazy var quakeMagLabel = QuakeLabel(fontSize: 25, fontWeight: .regular, textColor: .systemBackground)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,12 +40,12 @@ class QuakeDetailView: UIView {
         quakeNameLabel.text = mainModel.title
         timeLabel.text = "Time"
         quakeDatelabel.text = mainModel.date
-        quakeDepthLabel.text = "Quake Depth: \(mainModel.depth)"
+        quakeMagLabel.text = "Quake Mag: \(mainModel.mag)"
     }
     
     private func setupUI() {
         let padding : CGFloat = 20
-        addSubviews(locationLabel , quakeNameLabel , timeLabel , quakeDatelabel , quakeDepthLabel)
+        addSubviews(locationLabel , quakeNameLabel , timeLabel , quakeDatelabel , quakeMagLabel)
         
         NSLayoutConstraint.activate([
             locationLabel.topAnchor.constraint(equalTo: topAnchor, constant: padding),
@@ -53,8 +53,8 @@ class QuakeDetailView: UIView {
             locationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: padding),
             
             quakeNameLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: padding),
-            quakeNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
-            quakeNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: padding),
+            quakeNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor , constant: 5),
+            quakeNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             
             
             timeLabel.topAnchor.constraint(equalTo: quakeNameLabel.bottomAnchor, constant: padding),
@@ -66,9 +66,9 @@ class QuakeDetailView: UIView {
             quakeDatelabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             quakeDatelabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             
-            quakeDepthLabel.topAnchor.constraint(equalTo: quakeDatelabel.bottomAnchor, constant: padding),
-            quakeDepthLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
-            quakeDepthLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding)
+            quakeMagLabel.topAnchor.constraint(equalTo: quakeDatelabel.bottomAnchor, constant: padding),
+            quakeMagLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
+            quakeMagLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding)
             
         
         ])

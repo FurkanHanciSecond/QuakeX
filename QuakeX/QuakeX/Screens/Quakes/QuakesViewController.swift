@@ -33,8 +33,12 @@ class QuakesViewController: LoadingViewController {
         showLoadingView()
         generateHaptic()
         viewModel.getQuakes { [weak self] in
-            self?.quakeTableView.reloadDataOnMainThread()
-            self?.dismissLoadingView()
+            guard let self = self else  { return }
+            DispatchQueue.main.async {
+                self.quakeTableView.reloadDataOnMainThread()
+                self.dismissLoadingView()
+            }
+            
         } errorContent: { err in
             AlertManager.showAlert(message: err.rawValue, viewController: self)
         }
