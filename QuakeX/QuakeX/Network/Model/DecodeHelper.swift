@@ -7,15 +7,12 @@
 
 import Foundation
 
-class JSONNull: Codable, Hashable {
+class JSONNull: Codable {
 
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
     }
 
-    public var hashValue: Int {
-        return 0
-    }
 
     public init() {}
 

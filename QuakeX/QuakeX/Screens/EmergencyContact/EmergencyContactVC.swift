@@ -28,6 +28,7 @@ class EmergencyContactVC: UIViewController {
     
     @objc private func handlePlusButton(_ sender: UIButton) {
         present(AddNewContactVC(), animated: true, completion: nil)
+        //navigationController?.pushViewController(AddNewContactVC(), animated: true)
     }
     
     private func configureView() {

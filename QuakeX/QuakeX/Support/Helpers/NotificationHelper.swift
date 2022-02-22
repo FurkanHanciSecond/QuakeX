@@ -10,7 +10,7 @@ import UserNotifications
 class NotificationHelper {
     static let shared = NotificationHelper()
     
-    private init() { }
+    private init() { }
     
     func requestForPermission() -> Void {
         let center = UNUserNotificationCenter.current()

@@ -125,11 +125,22 @@ class QuakesViewController: LoadingViewController {
 
 
 extension QuakesViewController : UITableViewDelegate {
-    //TODO: Make Clickable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let quakes = viewModel.quakes?[indexPath.row]
         let quakeDetailViewController = QuakesDetailVC(mainModel: quakes ?? quakes.unsafelyUnwrapped)
         navigationController?.pushViewController(quakeDetailViewController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
+        
+        cell.layer.transform = rotationTransform
+        cell.alpha = 0.5
+        
+        UIView.animate(withDuration: 0.5) {
+            cell.layer.transform = CATransform3DIdentity
+            cell.alpha = 2.0
+        }
     }
 }
 
