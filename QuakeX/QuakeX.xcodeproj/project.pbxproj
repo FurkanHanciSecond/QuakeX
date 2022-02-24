@@ -33,6 +33,8 @@
 		704C08202766104D0049F999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C081F2766104D0049F999 /* SceneDelegate.swift */; };
 		704C08272766104E0049F999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704C08262766104E0049F999 /* Assets.xcassets */; };
 		704C082A2766104E0049F999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704C08282766104E0049F999 /* LaunchScreen.storyboard */; };
+		70539C7927C8059A00860F19 /* EmergencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70539C7827C8059A00860F19 /* EmergencyTableViewCell.swift */; };
+		70539C7D27C810A000860F19 /* QuakeDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70539C7B27C810A000860F19 /* QuakeDataModel.xcdatamodeld */; };
 		7055780427837A7400432BEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7055780327837A7400432BEF /* Constants.swift */; };
 		7076059427C2858600CFE295 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076059327C2858600CFE295 /* NotificationHelper.swift */; };
 		70988BC227C175490050AA38 /* QuakeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC127C175490050AA38 /* QuakeDetailViewModel.swift */; };
@@ -75,6 +77,8 @@
 		704C08262766104E0049F999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		704C08292766104E0049F999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		704C082B2766104E0049F999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70539C7827C8059A00860F19 /* EmergencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyTableViewCell.swift; sourceTree = "<group>"; };
+		70539C7C27C810A000860F19 /* QuakeDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuakeDataModel.xcdatamodel; sourceTree = "<group>"; };
 		7055780327837A7400432BEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7076059327C2858600CFE295 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		70988BC127C175490050AA38 /* QuakeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailViewModel.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				70092A6A27BD7F5D002A3364 /* QuakesTableViewCell.swift */,
+				70539C7827C8059A00860F19 /* EmergencyTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				70550661278BE17E00F12F25 /* Application */,
+				70539C7A27C8105500860F19 /* CoreData */,
 				70092A6027BD771D002A3364 /* Extensions */,
 				70236C67279F0AD600E82108 /* Network */,
 				70236C66279F0AB600E82108 /* Screens */,
@@ -252,6 +258,14 @@
 				704C082B2766104E0049F999 /* Info.plist */,
 			);
 			path = QuakeX;
+			sourceTree = "<group>";
+		};
+		70539C7A27C8105500860F19 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				70539C7B27C810A000860F19 /* QuakeDataModel.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		70550661278BE17E00F12F25 /* Application */ = {
@@ -430,10 +444,12 @@
 				70988BC227C175490050AA38 /* QuakeDetailViewModel.swift in Sources */,
 				70092A6427BD77DF002A3364 /* UIView+Ext.swift in Sources */,
 				70F524BD27B99B4800B46373 /* QTabbarController.swift in Sources */,
+				70539C7D27C810A000860F19 /* QuakeDataModel.xcdatamodeld in Sources */,
 				70092A6B27BD7F5D002A3364 /* QuakesTableViewCell.swift in Sources */,
 				70236C7D279F14B700E82108 /* DecodeHelper.swift in Sources */,
 				70236C75279F11DE00E82108 /* HTTPHeader.swift in Sources */,
 				70092A6827BD7A9B002A3364 /* QuakesModel.swift in Sources */,
+				70539C7927C8059A00860F19 /* EmergencyTableViewCell.swift in Sources */,
 				70F524B627B9991700B46373 /* SettingsVC.swift in Sources */,
 				70092A7327BD88DC002A3364 /* LoadingViewController.swift in Sources */,
 				70236C83279F163700E82108 /* RouterProtocol.swift in Sources */,
@@ -641,6 +657,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		70539C7B27C810A000860F19 /* QuakeDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70539C7C27C810A000860F19 /* QuakeDataModel.xcdatamodel */,
+			);
+			currentVersion = 70539C7C27C810A000860F19 /* QuakeDataModel.xcdatamodel */;
+			path = QuakeDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 704C08122766104D0049F999 /* Project object */;
 }

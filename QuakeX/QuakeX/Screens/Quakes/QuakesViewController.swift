@@ -110,7 +110,7 @@ class QuakesViewController: LoadingViewController {
         quakeTableView.separatorStyle = .none
         
         quakeTableView.removeExcessCells()
-        quakeTableView.register(QuakesTableViewCell.self, forCellReuseIdentifier: Constants.cellID)
+        quakeTableView.register(QuakesTableViewCell.self, forCellReuseIdentifier: Constants.quakeCellID)
     }
     
     private func configureTableViewDelegate() {
@@ -150,7 +150,7 @@ extension QuakesViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = quakeTableView.dequeueReusableCell(withIdentifier: Constants.cellID, for: indexPath) as! QuakesTableViewCell
+        let cell = quakeTableView.dequeueReusableCell(withIdentifier: Constants.quakeCellID, for: indexPath) as! QuakesTableViewCell
         let quake = viewModel.quakes?[indexPath.row]
         cell.set(data: quake ?? quake.unsafelyUnwrapped)
         return cell

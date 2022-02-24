@@ -57,7 +57,8 @@ class EmergencyContactVC: UIViewController {
         view.addSubview(emergencyTableView)
         emergencyTableView.pinToEdges(of: view)        
         emergencyTableView.removeExcessCells()
-        emergencyTableView.register(UITableViewCell.self, forCellReuseIdentifier: "test")
+        emergencyTableView.separatorStyle = .none
+        emergencyTableView.register(EmergencyTableViewCell.self, forCellReuseIdentifier: Constants.emergencyCellID)
     }
 
 }
@@ -68,6 +69,12 @@ extension EmergencyContactVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         return UISwipeActionsConfiguration()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let number = "5469327550"
+        guard let number = URL(string: "tel://" + number) else { return }
+        UIApplication.shared.open(number)
+    }
 }
 
 extension EmergencyContactVC : UITableViewDataSource {
@@ -76,9 +83,12 @@ extension EmergencyContactVC : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Still In Development :D"
+        let cell = emergencyTableView.dequeueReusableCell(withIdentifier: Constants.emergencyCellID, for: indexPath) as! EmergencyTableViewCell
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }

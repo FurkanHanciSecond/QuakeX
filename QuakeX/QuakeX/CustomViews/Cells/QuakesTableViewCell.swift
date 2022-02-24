@@ -32,7 +32,7 @@ class QuakesTableViewCell: UITableViewCell {
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: Constants.cellID)
+        super.init(style: style, reuseIdentifier: Constants.quakeCellID)
         
         
         configureCell()

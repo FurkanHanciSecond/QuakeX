@@ -8,14 +8,13 @@
 import UIKit
 
 class AddNewContactVC: UIViewController {
-    //TODO: 👇
     private lazy var contactNumberTextField : UITextField = {
        let textField = UITextField()
         textField.placeholder = "Enter Contact Number 😊"
         textField.layer.cornerRadius = 15
         textField.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         textField.autocorrectionType = UITextAutocorrectionType.default
-        textField.keyboardType = UIKeyboardType.default
+        textField.keyboardType = UIKeyboardType.numberPad
         textField.returnKeyType = UIReturnKeyType.done
         textField.clearButtonMode = UITextField.ViewMode.whileEditing
         textField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center

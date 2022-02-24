@@ -11,7 +11,8 @@ struct Constants {
     
     static let url = "https://api.orhanaydogdu.com.tr/deprem/live.php?limit=100"
     static let baseUrl = "api.orhanaydogdu.com.tr"
-    static let cellID = "quakeCell"
+    static let quakeCellID = "quakeCell"
+    static let emergencyCellID = "emergencyCell"
     static let question = "?"
     static let mapReuse = "quakeMap"
     struct Text {
@@ -38,6 +39,7 @@ struct Constants {
             static let quakes = UIImage(systemName: "house")
             static let emergencyContacts = UIImage(systemName: "person.3")
             static let settings = UIImage(systemName: "gearshape")
+            static let phone = UIImage(systemName: "phone.fill")
         }
         
         enum Color {
@@ -53,6 +55,7 @@ struct Constants {
             static let cellShadow = UIColor.cellShadow
             static let detailBackground = UIColor.detailBackground
             static let detailShadow = UIColor.detailShadow
+            static let white = UIColor.white
         }
         
     }
