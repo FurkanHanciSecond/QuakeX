@@ -40,6 +40,7 @@
 		70988BC227C175490050AA38 /* QuakeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC127C175490050AA38 /* QuakeDetailViewModel.swift */; };
 		70988BC427C175570050AA38 /* QuakeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC327C175570050AA38 /* QuakeDetailModel.swift */; };
 		70988BC627C17C3A0050AA38 /* QuakeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC527C17C3A0050AA38 /* QuakeDetailView.swift */; };
+		70BEDB3C27C8142800AF8ED3 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDB3B27C8142800AF8ED3 /* CoreDataHelper.swift */; };
 		70F524AC27B995A800B46373 /* QuakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F524AB27B995A800B46373 /* QuakesViewController.swift */; };
 		70F524B227B998ED00B46373 /* QuakesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F524B127B998ED00B46373 /* QuakesDetailVC.swift */; };
 		70F524B427B9990600B46373 /* EmergencyContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F524B327B9990600B46373 /* EmergencyContactVC.swift */; };
@@ -84,6 +85,7 @@
 		70988BC127C175490050AA38 /* QuakeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailViewModel.swift; sourceTree = "<group>"; };
 		70988BC327C175570050AA38 /* QuakeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailModel.swift; sourceTree = "<group>"; };
 		70988BC527C17C3A0050AA38 /* QuakeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailView.swift; sourceTree = "<group>"; };
+		70BEDB3B27C8142800AF8ED3 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		70F524AB27B995A800B46373 /* QuakesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesViewController.swift; sourceTree = "<group>"; };
 		70F524B127B998ED00B46373 /* QuakesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesDetailVC.swift; sourceTree = "<group>"; };
 		70F524B327B9990600B46373 /* EmergencyContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactVC.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				7076059327C2858600CFE295 /* NotificationHelper.swift */,
+				70BEDB3B27C8142800AF8ED3 /* CoreDataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				704C08202766104D0049F999 /* SceneDelegate.swift in Sources */,
 				70092A6D27BD8023002A3364 /* UIColor+Ext.swift in Sources */,
 				70F524B927B9998A00B46373 /* AddNewContactVC.swift in Sources */,
+				70BEDB3C27C8142800AF8ED3 /* CoreDataHelper.swift in Sources */,
 				70236C89279F22B600E82108 /* AlertService.swift in Sources */,
 				7055780427837A7400432BEF /* Constants.swift in Sources */,
 				70236C87279F191900E82108 /* ServiceClient.swift in Sources */,
