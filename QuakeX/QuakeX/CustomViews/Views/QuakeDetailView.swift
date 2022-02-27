@@ -38,7 +38,7 @@ class QuakeDetailView: UIView {
     public func setupTexts(with mainModel : MainModel) {
         locationLabel.text = "Location:"
         quakeNameLabel.text = mainModel.title
-        timeLabel.text = "Time"
+        timeLabel.text = "Time:"
         quakeDatelabel.text = mainModel.date
         quakeMagLabel.text = "Quake Mag: \(mainModel.mag)"
     }
@@ -53,7 +53,7 @@ class QuakeDetailView: UIView {
             locationLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: padding),
             
             quakeNameLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: padding),
-            quakeNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor , constant: 5),
+            quakeNameLabel.leadingAnchor.constraint(equalTo: timeLabel.leadingAnchor),
             quakeNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             
             
@@ -62,7 +62,7 @@ class QuakeDetailView: UIView {
             timeLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: padding),
             
             
-            quakeDatelabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: padding),
+            quakeDatelabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 10),
             quakeDatelabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             quakeDatelabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             
