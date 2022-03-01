@@ -102,6 +102,7 @@ class QuakesViewController: LoadingViewController {
     
     private func configureNavigationController() {
         title = viewModel.title
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func configureTableView() {

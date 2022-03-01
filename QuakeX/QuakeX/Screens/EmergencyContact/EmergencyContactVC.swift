@@ -106,7 +106,6 @@ extension EmergencyContactVC : UITableViewDelegate {
         let action = UIContextualAction(style: .destructive, title: "Delete Contact") { action, view, handler in
             let eventRemove = self.contacts?[indexPath.row]
             self.context.delete(eventRemove ?? eventRemove.unsafelyUnwrapped)
-            
             do {
                 try self.context.save()
             } catch {
@@ -132,6 +131,7 @@ extension EmergencyContactVC : UITableViewDelegate {
 
 extension EmergencyContactVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       // return contacts?.count ?? 0
         return contacts?.count ?? 0
     }
     

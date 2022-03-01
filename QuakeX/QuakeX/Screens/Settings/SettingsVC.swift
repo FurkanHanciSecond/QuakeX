@@ -21,5 +21,6 @@ class SettingsVC: UIViewController {
     private func configureView() {
         view.backgroundColor = .systemBackground
         self.title = Constants.Text.Bar.settings
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
