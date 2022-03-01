@@ -100,7 +100,6 @@ class AddNewContactVC: UIViewController {
         saveButton.addTarget(self, action: #selector(saveContact), for: .touchUpInside)
     }
     
-    //TODO: MAKE WITH HELPER
    @objc private func saveContact() {
        let contact = EmergencyContact(context: self.context)
        contact.name = contactNameTextField.text
@@ -108,7 +107,9 @@ class AddNewContactVC: UIViewController {
        
        do {
            try self.context.save()
-           AlertManager.showAlert(title: "Yay 🎉", message: "The Contact Has Been saved To Emergency Contacts ", alertAction: nil, viewController: self)
+           DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+               self.dismiss(animated: true, completion: nil)
+           }
        } catch  {
            AlertManager.showAlert(message: QuakeError.coreDataError.rawValue, viewController: self)
        }

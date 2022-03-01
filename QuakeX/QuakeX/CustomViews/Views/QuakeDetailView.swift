@@ -33,6 +33,7 @@ class QuakeDetailView: UIView {
     private func setDetail() {
         backgroundColor = Constants.Style.Color.detailBackground
         layer.cornerRadius = 15
+        dropDetailShadow()
     }
     
     public func setupTexts(with mainModel : MainModel) {

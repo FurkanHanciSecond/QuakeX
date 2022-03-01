@@ -120,7 +120,8 @@ extension EmergencyContactVC : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let contactNumber = "545 592 29 17"
+        let contacts = self.contacts?[indexPath.row]
+        guard let contactNumber = contacts?.number else { return }
         guard let number = URL(string: "tel://" + contactNumber) else { return }
         UIApplication.shared.open(number)
     }
@@ -131,7 +132,6 @@ extension EmergencyContactVC : UITableViewDelegate {
 
 extension EmergencyContactVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       // return contacts?.count ?? 0
         return contacts?.count ?? 0
     }
     
