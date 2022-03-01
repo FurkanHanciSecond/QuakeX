@@ -13,4 +13,5 @@ enum QuakeError: String , Error {
     case responseError = "Response Error"
     case dataError = "Data Error"
     case urlError = "Invalid URL"
+    case coreDataError = "The Data Can Not Saved"
 }

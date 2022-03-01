@@ -59,7 +59,7 @@ final class ServiceClient : QuakeServiceDelegate {
                 
             } catch {
                 completion(.failure(.decodingError))
-                print(err)
+                print(err?.localizedDescription as Any)
             }
 
 

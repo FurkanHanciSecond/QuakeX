@@ -16,6 +16,7 @@ struct Constants {
     static let question = "?"
     static let mapReuse = "quakeMap"
     struct Text {
+        static let saveContact = "Save Contact"
         enum Error {
             static let ok = "OK"
             static let oops = "Oops an error occured"
@@ -56,6 +57,7 @@ struct Constants {
             static let detailBackground = UIColor.detailBackground
             static let detailShadow = UIColor.detailShadow
             static let white = UIColor.white
+            static let blue = UIColor.blue
         }
         
     }

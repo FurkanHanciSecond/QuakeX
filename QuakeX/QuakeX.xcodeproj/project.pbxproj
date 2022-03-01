@@ -41,6 +41,9 @@
 		70988BC427C175570050AA38 /* QuakeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC327C175570050AA38 /* QuakeDetailModel.swift */; };
 		70988BC627C17C3A0050AA38 /* QuakeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70988BC527C17C3A0050AA38 /* QuakeDetailView.swift */; };
 		70BEDB3C27C8142800AF8ED3 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BEDB3B27C8142800AF8ED3 /* CoreDataHelper.swift */; };
+		70E52C6727CD3A8B00CC0581 /* QButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E52C6627CD3A8B00CC0581 /* QButton.swift */; };
+		70E52C7227CD42F400CC0581 /* EmergencyContact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E52C7027CD42F400CC0581 /* EmergencyContact+CoreDataClass.swift */; };
+		70E52C7327CD42F400CC0581 /* EmergencyContact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E52C7127CD42F400CC0581 /* EmergencyContact+CoreDataProperties.swift */; };
 		70F524AC27B995A800B46373 /* QuakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F524AB27B995A800B46373 /* QuakesViewController.swift */; };
 		70F524B227B998ED00B46373 /* QuakesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F524B127B998ED00B46373 /* QuakesDetailVC.swift */; };
 		70F524B427B9990600B46373 /* EmergencyContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F524B327B9990600B46373 /* EmergencyContactVC.swift */; };
@@ -86,6 +89,9 @@
 		70988BC327C175570050AA38 /* QuakeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailModel.swift; sourceTree = "<group>"; };
 		70988BC527C17C3A0050AA38 /* QuakeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailView.swift; sourceTree = "<group>"; };
 		70BEDB3B27C8142800AF8ED3 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		70E52C6627CD3A8B00CC0581 /* QButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QButton.swift; sourceTree = "<group>"; };
+		70E52C7027CD42F400CC0581 /* EmergencyContact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmergencyContact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		70E52C7127CD42F400CC0581 /* EmergencyContact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmergencyContact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		70F524AB27B995A800B46373 /* QuakesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesViewController.swift; sourceTree = "<group>"; };
 		70F524B127B998ED00B46373 /* QuakesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesDetailVC.swift; sourceTree = "<group>"; };
 		70F524B327B9990600B46373 /* EmergencyContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactVC.swift; sourceTree = "<group>"; };
@@ -265,6 +271,8 @@
 		70539C7A27C8105500860F19 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				70E52C7027CD42F400CC0581 /* EmergencyContact+CoreDataClass.swift */,
+				70E52C7127CD42F400CC0581 /* EmergencyContact+CoreDataProperties.swift */,
 				70539C7B27C810A000860F19 /* QuakeDataModel.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -296,6 +304,14 @@
 				70BEDB3B27C8142800AF8ED3 /* CoreDataHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		70E52C6527CD3A7800CC0581 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				70E52C6627CD3A8B00CC0581 /* QButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		70F524AD27B9988C00B46373 /* Quakes */ = {
@@ -345,6 +361,7 @@
 		70F524BA27B99ABC00B46373 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				70E52C6527CD3A7800CC0581 /* Buttons */,
 				70092A7127BD88C6002A3364 /* Views */,
 				70092A6E27BD8131002A3364 /* Label */,
 				70092A6927BD7F47002A3364 /* Cells */,
@@ -445,12 +462,15 @@
 				70F524B227B998ED00B46373 /* QuakesDetailVC.swift in Sources */,
 				70236C81279F154B00E82108 /* ServiceClientProtocol.swift in Sources */,
 				70988BC227C175490050AA38 /* QuakeDetailViewModel.swift in Sources */,
+				70E52C7327CD42F400CC0581 /* EmergencyContact+CoreDataProperties.swift in Sources */,
 				70092A6427BD77DF002A3364 /* UIView+Ext.swift in Sources */,
 				70F524BD27B99B4800B46373 /* QTabbarController.swift in Sources */,
+				70E52C6727CD3A8B00CC0581 /* QButton.swift in Sources */,
 				70539C7D27C810A000860F19 /* QuakeDataModel.xcdatamodeld in Sources */,
 				70092A6B27BD7F5D002A3364 /* QuakesTableViewCell.swift in Sources */,
 				70236C7D279F14B700E82108 /* DecodeHelper.swift in Sources */,
 				70236C75279F11DE00E82108 /* HTTPHeader.swift in Sources */,
+				70E52C7227CD42F400CC0581 /* EmergencyContact+CoreDataClass.swift in Sources */,
 				70092A6827BD7A9B002A3364 /* QuakesModel.swift in Sources */,
 				70539C7927C8059A00860F19 /* EmergencyTableViewCell.swift in Sources */,
 				70F524B627B9991700B46373 /* SettingsVC.swift in Sources */,

@@ -49,13 +49,8 @@ class EmergencyTableViewCell: UITableViewCell {
         containerView.layer.cornerRadius = containerView.frame.height / 5
     }
     
-    private func setupTexts() {
-        contactNameLabel.text = "Test..."
-    }
-    
     private func setupCell() {
         selectionStyle = .none
-        setupTexts()
         configureUI()
     }
     
@@ -83,6 +78,10 @@ class EmergencyTableViewCell: UITableViewCell {
             contactNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: padding),
             contactNameLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
         ])
+    }
+    
+    public func setCell(data : EmergencyContact?) {
+        contactNameLabel.text = data?.name
     }
     
 }
